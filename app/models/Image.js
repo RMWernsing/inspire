@@ -10,6 +10,4 @@ export class Image {
     this.attribution = data.attribution
   }
 
-
-
 }
