@@ -21,9 +21,9 @@ export class TodosController {
 
   drawTodoCount() {
     const todos = AppState.todos
-    const completedTodos = todos.filter(todo => todo.completed)
+    const completedTodos = todos.filter(todo => !todo.completed)
     const todoCountElem = document.getElementById('todoCount')
-    todoCountElem.innerHTML = `${completedTodos.length} completed/${todos.length} total`
+    todoCountElem.innerHTML = `${completedTodos.length} not completed/${todos.length} total`
   }
 
   async getTodos() {

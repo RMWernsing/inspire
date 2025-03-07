@@ -7,6 +7,8 @@ export class Todo {
     this.id = data.id
   }
 
+
+
   get todoListTemplate() {
     return `
       <div class="d-flex align-items-baseline justify-content-between">
