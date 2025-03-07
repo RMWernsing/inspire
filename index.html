@@ -34,30 +34,32 @@
       </div>
     </div>
     </div>
-    <section class="container">
+    <section class="container-fluid">
       <div class="row justify-content-end">
         <div class="col-md-2">
-          <h2 class="text-center mt-5">Todo List</h2>
-          <div class="text-center">
-            <p>Checkmark Tracker</p>
-            <p id="todoCount">0/0</p>
-          </div>
-          <div class="d-block">
-            <form class="mb-2" onsubmit="app.todosController.createTodo()">
-              <label for="description">Create Todo</label>
-              <div class="d-flex">
-                <input class="input-Width" id="description" name="description" type="text" maxlength="500" required>
-                <button type="submit" class="btn btn-outlin-dark"><span
-                    class="mdi mdi-plus-circle-outline"></span></button>
-              </div>
-            </form>
-          </div>
-          <!-- STUB Todo Template -->
-          <div id="todoList">
-            <!-- <div class="d-flex mt-2 align-items-baseline">
+          <div class="bg-light p-3 mt-2">
+            <h2 class="text-center mt-5">Todo List</h2>
+            <div class="text-center">
+              <p>Checkmark Tracker</p>
+              <p id="todoCount">0/0</p>
+            </div>
+            <div class="d-block">
+              <form class="mb-2" onsubmit="app.todosController.createTodo()">
+                <label for="description">Create Todo</label>
+                <div class="d-flex">
+                  <input class="input-Width" id="description" name="description" type="text" maxlength="500" required>
+                  <button type="submit" class="btn btn-outlin-dark"><span
+                      class="mdi mdi-plus-circle-outline"></span></button>
+                </div>
+              </form>
+            </div>
+            <!-- STUB Todo Template -->
+            <div id="todoList">
+              <!-- <div class="d-flex mt-2 align-items-baseline">
               <input type="checkbox">
               <p class="ms-3">Todo goes here</p>
             </div> -->
+            </div>
           </div>
         </div>
       </div>

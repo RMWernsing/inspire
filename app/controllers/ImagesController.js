@@ -1,10 +1,16 @@
+import { AppState } from "../AppState.js";
 import { imagesService } from "../services/ImagesService.js";
 import { Pop } from "../utils/Pop.js";
 
 export class ImagesController {
   constructor() {
-    console.log('Images Controller Working🎉🎉🎉');
+    AppState.on('activeImage', this.drawActiveImage)
     this.getImage()
+  }
+
+  async drawActiveImage() {
+    const image = AppState.activeImage
+    document.body.style.backgroundImage = `url(${image.raw}), url(${image.small})`
   }
 
   async getImage() {
