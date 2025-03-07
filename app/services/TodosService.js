@@ -4,6 +4,15 @@ import { api } from "../utils/Axios.js"
 
 class TodosService {
 
+  async deleteTodo(todoId) {
+    const todos = AppState.todos
+    const response = await api.delete(`api/todos/${todoId}`)
+    console.log('deleted todo', response.data);
+    const todoIndex = todos.findIndex(todo => todo.id == todoId)
+    todos.splice(todoIndex, 1)
+
+  }
+
   async createTodo(todoData) {
     const todos = AppState.todos
     const response = await api.post('api/todos', todoData)

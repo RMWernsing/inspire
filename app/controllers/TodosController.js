@@ -50,4 +50,17 @@ export class TodosController {
       Pop.error(error, 'Could not create todo')
     }
   }
+
+  async deleteTodo(todoId) {
+    try {
+      const confirmed = await Pop.confirm('Are You Sure You Want To Delete This Note?', 'If you do, you will not be able to recover it.', 'YES', 'NO')
+      if (!confirmed) {
+        return
+      }
+      await todosService.deleteTodo(todoId)
+    } catch (error) {
+      console.error("COULD NOT DELETE TODO", error);
+      Pop.error(error, 'Could not delete todo')
+    }
+  }
 }

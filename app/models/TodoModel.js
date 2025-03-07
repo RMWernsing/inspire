@@ -8,9 +8,10 @@ export class Todo {
 
   get todoListTemplate() {
     return `
-      <div class="d-flex mt-2 align-items-baseline">
+      <div class="d-flex mt-2 align-items-baseline justify-content-between">
         <input onchange="app.todosController.toggleTodoCompletion('${this.id}')" title="Complete Todo" type="checkbox" ${this.completed ? 'checked' : ''}>
         <p class="ms-3">${this.description}</p>
+        <button onclick="app.todosController.deleteTodo('${this.id}')" class="btn"><span class="text-danger mdi mdi-trash-can-outline"></span></button>
       </div>
     `
   }
