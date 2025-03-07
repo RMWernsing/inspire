@@ -5,12 +5,19 @@ import { Pop } from "../utils/Pop.js";
 export class ImagesController {
   constructor() {
     AppState.on('activeImage', this.drawActiveImage)
+    AppState.on('activeImage', this.drawAttribution)
     this.getImage()
   }
 
   async drawActiveImage() {
     const image = AppState.activeImage
     document.body.style.backgroundImage = `url(${image.raw}), url(${image.small})`
+  }
+
+  async drawAttribution() {
+    const image = AppState.activeImage
+    const attributionElem = document.getElementById('attribution')
+    attributionElem.innerText = image.attribution
   }
 
   async getImage() {

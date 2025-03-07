@@ -6,7 +6,6 @@ body {
 
   background-position: center;
   background-size: cover;
-  back
 }
 
 main {
@@ -19,6 +18,10 @@ label {
 
 .input-width {
   min-width: 90%;
+}
+
+.attribution-shadow {
+  text-shadow: 0px 0px 5px black;
 }
 
 #pop-toast-container {

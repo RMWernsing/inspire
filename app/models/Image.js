@@ -10,9 +10,6 @@ export class Image {
     this.attribution = data.attribution
   }
 
-  get attributionTemplate() {
-    return `
-    
-    `
-  }
+
+
 }
