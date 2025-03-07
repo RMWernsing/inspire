@@ -7,9 +7,14 @@ body {
 
 main {
   flex-grow: 1;
-  display: flex;
-  place-content: center;
-  align-items: center;
+}
+
+label {
+  display: block;
+}
+
+.input-width {
+  min-width: 90%;
 }
 
 #pop-toast-container {
