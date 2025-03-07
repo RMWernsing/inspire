@@ -3,12 +3,22 @@ import { Todo } from "../models/TodoModel.js";
 import { api } from "../utils/Axios.js"
 
 class TodosService {
+
+  async createTodo(todoData) {
+    const todos = AppState.todos
+    const response = await api.post('api/todos', todoData)
+    console.log('here is your new todo', response.data);
+    const newTodo = new Todo(response.data)
+    AppState.todos.push(newTodo)
+
+  }
+
   async toggleTodoCompletion(todoId) {
     const foundTodo = AppState.todos.find(todo => todo.id == todoId)
     foundTodo.completed = !foundTodo.completed
 
     const response = await api.put(`api/todos/${todoId}`, foundTodo)
-    console.log('udated todo', response.data);
+    // console.log('udated todo', response.data);
 
   }
 

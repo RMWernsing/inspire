@@ -30,10 +30,10 @@
         <div class="col-2">
           <h2 class="text-center">Todo List</h2>
           <div class="d-block">
-            <form>
+            <form onsubmit="app.todosController.createTodo()">
               <label for="description">Create Todo</label>
               <div class="d-flex">
-                <input class="input-Width" id="description" name="description" type="text">
+                <input class="input-Width" id="description" name="description" type="text" maxlength="500" required>
                 <button type="submit" class="btn btn-outlin-dark"><span
                     class="mdi mdi-plus-circle-outline"></span></button>
               </div>

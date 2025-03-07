@@ -1,5 +1,6 @@
 import { AppState } from "../AppState.js";
 import { todosService } from "../services/TodosService.js";
+import { getFormData } from "../utils/FormHandler.js";
 import { Pop } from "../utils/Pop.js";
 
 export class TodosController {
@@ -32,6 +33,21 @@ export class TodosController {
     } catch (error) {
       console.error("COULD NOT CHANGE COMPLETION", error);
       Pop.error(error, 'Could not change completion')
+    }
+
+  }
+
+  async createTodo() {
+    try {
+      event.preventDefault()
+      const formElem = event.target
+      const rawTodoData = getFormData(formElem)
+      // console.log('data from form', rawTodoData);
+
+      await todosService.createTodo(rawTodoData)
+    } catch (error) {
+      console.error("COULD NOT CREATE TODO", error);
+      Pop.error(error, 'Could not create todo')
     }
   }
 }
