@@ -6,10 +6,10 @@ class ImagesService {
 
   async getImage() {
     const response = await api.get('api/images')
-    console.log('here is your image!', response.data);
+    // console.log('here is your image!', response.data);
     const image = new Image(response.data)
     AppState.activeImage = image
-    console.log('here is your active image', AppState.activeImage);
+    // console.log('here is your active image', AppState.activeImage);
   }
 
 }

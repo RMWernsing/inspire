@@ -37,10 +37,10 @@
     <section class="container-fluid">
       <div class="row justify-content-between">
         <div class="col-2">
-          <p id="attribution" class="ms-3 text-light attribution-shadow fw-bold"></p>
+          <p id="attribution" class="ms-4 text-light attribution-shadow fw-bold mt-4"></p>
         </div>
         <div class="col-md-2">
-          <div class="bg-light p-3 mt-2">
+          <div class="bg-light p-3 mt-4 me-2">
             <h2 class="text-center mt-5">Todo List</h2>
             <div class="text-center">
               <p>Checkmark Tracker</p>
@@ -49,7 +49,7 @@
             <div class="d-block">
               <form class="mb-2" onsubmit="app.todosController.createTodo()">
                 <label for="description">Create Todo</label>
-                <div class="d-flex">
+                <div class="d-flex flex-wrap">
                   <input class="input-Width" id="description" name="description" type="text" maxlength="500" required>
                   <button type="submit" class="btn btn-outlin-dark"><span
                       class="mdi mdi-plus-circle-outline"></span></button>

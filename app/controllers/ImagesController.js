@@ -7,7 +7,6 @@ export class ImagesController {
     AppState.on('activeImage', this.drawActiveImage)
     AppState.on('activeImage', this.drawAttribution)
     this.getImage()
-    setInterval(this.drawCurrentTime, 1000);
   }
 
   async drawActiveImage() {
@@ -21,16 +20,9 @@ export class ImagesController {
     attributionElem.innerText = image.attribution
   }
 
-  drawCurrentTime() {
-    const now = new Date()
-    const time = now.toLocaleTimeString()
-    const currentTimeElem = document.getElementById('currentTime')
-    currentTimeElem.innerText = time
-  }
-
   async getImage() {
     try {
-      console.log('getting image');
+      // console.log('getting image');
       await imagesService.getImage()
 
     } catch (error) {
