@@ -28,9 +28,13 @@
     <section class="container">
       <div class="row justify-content-end">
         <div class="col-md-2">
-          <h2 class="text-center">Todo List</h2>
+          <h2 class="text-center mt-5">Todo List</h2>
+          <div class="text-center">
+            <p>Checkmark Tracker</p>
+            <p id="todoCount">0/0</p>
+          </div>
           <div class="d-block">
-            <form onsubmit="app.todosController.createTodo()">
+            <form class="mb-2" onsubmit="app.todosController.createTodo()">
               <label for="description">Create Todo</label>
               <div class="d-flex">
                 <input class="input-Width" id="description" name="description" type="text" maxlength="500" required>

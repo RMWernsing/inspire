@@ -1,6 +1,7 @@
 import { AppState } from "../AppState.js";
 import { Todo } from "../models/TodoModel.js";
 import { api } from "../utils/Axios.js"
+import { EventEmitter } from "../utils/EventEmitter.js";
 
 class TodosService {
 
@@ -28,7 +29,7 @@ class TodosService {
 
     const response = await api.put(`api/todos/${todoId}`, foundTodo)
     // console.log('udated todo', response.data);
-
+    AppState.emit('todos')
   }
 
   async getTodos() {

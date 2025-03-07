@@ -7,6 +7,7 @@ export class TodosController {
   constructor() {
     AppState.on('identity', this.getTodos)
     AppState.on('todos', this.drawTodoList)
+    AppState.on('todos', this.drawTodoCount)
 
   }
 
@@ -16,6 +17,13 @@ export class TodosController {
     todoList.forEach(todo => todoListContent += todo.todoListTemplate)
     const todoListElem = document.getElementById('todoList')
     todoListElem.innerHTML = todoListContent
+  }
+
+  drawTodoCount() {
+    const todos = AppState.todos
+    const completedTodos = todos.filter(todo => todo.completed)
+    const todoCountElem = document.getElementById('todoCount')
+    todoCountElem.innerHTML = `${completedTodos.length} completed/${todos.length} total`
   }
 
   async getTodos() {
