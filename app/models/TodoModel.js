@@ -8,8 +8,10 @@ export class Todo {
 
   get todoListTemplate() {
     return `
-      <input type="checkbox">
-      <p class="ms-3">Todo goes here</p>
+      <div class="d-flex mt-2 align-items-baseline">
+        <input onchange="app.todosController.toggleTodoCompletion('${this.id}')" title="Complete Todo" type="checkbox" ${this.completed ? 'checked' : ''}>
+        <p class="ms-3">${this.description}</p>
+      </div>
     `
   }
 }
