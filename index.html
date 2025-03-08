@@ -39,7 +39,7 @@
         <div class="col-2">
           <p id="attribution" class="ms-4 text-light attribution-shadow fw-bold mt-4"></p>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-3">
           <div class="bg-light p-3 mt-4 me-2">
             <h2 class="text-center mt-5">Todo List</h2>
             <div class="text-center">
@@ -71,11 +71,17 @@
   </main>
 
   <footer>
+    <div class="text-light attribution-shadow text-center mb-5">
+      quote
+    </div>
     <div class="container-fluid">
       <div class="row justify-content-center">
         <div class="col-8">
           <div class="bg-codeworks text-light d-flex justify-content-between p-3 rounded-4 mb-5">
-            <p>temperature</p>
+            <div title="Change Temperature Format" type="button" id="temp"
+              onclick="app.tempsController.changeFahrenheitToCelsius()">
+              <!-- <p>hello</p> -->
+            </div>
             <p id="currentTime" class="fs-2"></p>
             <div id="authstate">
             </div>

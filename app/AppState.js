@@ -9,6 +9,8 @@ class ObservableAppState extends EventEmitter {
 
   activeImage = null
 
+  temp = null
+
 }
 
 export const AppState = createObservableProxy(new ObservableAppState())
