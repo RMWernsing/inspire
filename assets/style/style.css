@@ -24,6 +24,19 @@ label {
   text-shadow: 0px 0px 5px black;
 }
 
+.quote-author {
+  opacity: 0;
+}
+
+.quote-author {
+  opacity: 0;
+}
+
+.quote-author-reveal:hover+div {
+  opacity: 100;
+  transition: opacity 1s ease;
+}
+
 #pop-toast-container {
   display: flex;
   flex-direction: column;

@@ -11,6 +11,8 @@ class ObservableAppState extends EventEmitter {
 
   temp = null
 
+  quote = null
+
 }
 
 export const AppState = createObservableProxy(new ObservableAppState())
