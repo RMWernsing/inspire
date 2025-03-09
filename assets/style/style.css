@@ -17,7 +17,7 @@ label {
 }
 
 .input-width {
-  min-width: 90%;
+  width: 100%;
 }
 
 .attribution-shadow {

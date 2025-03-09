@@ -8,7 +8,6 @@ export class Todo {
   }
 
 
-
   get todoListTemplate() {
     return `
       <div class="d-flex align-items-baseline justify-content-between">
@@ -18,4 +17,5 @@ export class Todo {
       </div>
     `
   }
+
 }

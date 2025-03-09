@@ -12,5 +12,14 @@ export class Quote {
     `
   }
 
+  get todoButtonTemplate() {
+    return `
+      <a class="btn btn-dark" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+        aria-controls="offcanvasExample">
+        Todo List
+      </a>
+    `
+  }
+
 }
 

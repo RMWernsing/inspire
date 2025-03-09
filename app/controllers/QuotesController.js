@@ -14,6 +14,8 @@ export class QuotesController {
     quoteElem.innerHTML = quote.quoteTemplate
   }
 
+
+
   async getQuotes() {
     try {
       await quotesService.getQuotes()

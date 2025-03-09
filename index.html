@@ -34,12 +34,53 @@
       </div>
     </div> -->
     </div>
+    <p id="attribution" class="ms-4 text-light attribution-shadow fw-bold mt-4"></p>
     <section class="container-fluid">
-      <div class="row justify-content-between">
+      <div class="row justify-content-end">
         <div class="col-2">
+          <a class="btn btn-dark" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+            aria-controls="offcanvasExample">
+            Todo List
+          </a>
+
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasExampleLabel">ToDo List</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <div>
+                <div class="p-3 mt-4 me-2">
+                  <div class="text-center">
+                    <p class="fw-bold">Checkmark Tracker</p>
+                    <p id="todoCount">0/0</p>
+                  </div>
+                  <div class="d-block">
+                    <form class="mb-2" onsubmit="app.todosController.createTodo()">
+                      <label for="description">Create Todo</label>
+                      <div class="d-flex flex-wrap">
+                        <input class="input-Width" id="description" name="description" type="text" maxlength="500"
+                          required>
+                        <button type="submit" class="btn btn-outlin-dark"><span
+                            class="mdi mdi-plus-circle-outline"></span></button>
+                      </div>
+                    </form>
+                  </div>
+                  <!-- STUB Todo Template -->
+                  <div id="todoList">
+                    <!-- <div class="d-flex mt-2 align-items-baseline">
+                    <input type="checkbox">
+                    <p class="ms-3">Todo goes here</p>
+                  </div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <p id="attribution" class="ms-4 text-light attribution-shadow fw-bold mt-4"></p>
         </div>
-        <div class="col-md-3">
+        <!-- <div class="col-md-3">
           <div class="bg-info-subtle p-3 mt-4 me-2">
             <h2 class="text-center mt-5">Todo List</h2>
             <div class="text-center">
@@ -57,14 +98,14 @@
               </form>
             </div>
             <!-- STUB Todo Template -->
-            <div id="todoList">
-              <!-- <div class="d-flex mt-2 align-items-baseline">
+        <!-- <div id="todoList"> -->
+        <!-- <div class="d-flex mt-2 align-items-baseline">
               <input type="checkbox">
               <p class="ms-3">Todo goes here</p>
             </div> -->
-            </div>
-          </div>
-        </div>
+      </div>
+      </div>
+      </div>
       </div>
     </section>
 
@@ -79,12 +120,12 @@
       <div class="row justify-content-center">
         <div class="col-8">
           <div class="bg-codeworks text-light d-flex justify-content-between p-3 rounded-4 mb-5">
-            <div title="Change Temperature Format" type="button" id="temp"
+            <div class="pt-2" title="Change Temperature Format" type="button" id="temp"
               onclick="app.tempsController.changeFahrenheitToCelsius()">
               <!-- <p>hello</p> -->
             </div>
             <p id="currentTime" class="fs-2"></p>
-            <div id="authstate">
+            <div class="pt-2" id="authstate">
             </div>
           </div>
         </div>

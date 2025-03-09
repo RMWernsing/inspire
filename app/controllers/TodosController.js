@@ -8,7 +8,6 @@ export class TodosController {
     AppState.on('identity', this.getTodos)
     AppState.on('todos', this.drawTodoList)
     AppState.on('todos', this.drawTodoCount)
-
   }
 
   drawTodoList() {
@@ -25,6 +24,7 @@ export class TodosController {
     const todoCountElem = document.getElementById('todoCount')
     todoCountElem.innerHTML = `${completedTodos.length} not completed/${todos.length} total`
   }
+
 
   async getTodos() {
     try {
