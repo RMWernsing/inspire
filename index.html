@@ -38,19 +38,19 @@
     <section class="container-fluid">
       <div class="row justify-content-end">
         <div class="col-2">
-          <a class="btn btn-dark" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
-            aria-controls="offcanvasExample">
+          <a id="todo-list-button" class="btn btn-dark d-none" data-bs-toggle="offcanvas" href="#offcanvasExample"
+            role="button" aria-controls="offcanvasExample">
             Todo List
           </a>
 
-          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample"
+          <div class="offcanvas offcanvas-end bg-codeworks" tabindex="-1" id="offcanvasExample"
             aria-labelledby="offcanvasExampleLabel">
             <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasExampleLabel">ToDo List</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              <h5 class="offcanvas-title text-light" id="offcanvasExampleLabel">ToDo List</h5>
+              <button type="button" class="btn-light btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
-              <div>
+              <div class="text-light">
                 <div class="p-3 mt-4 me-2">
                   <div class="text-center">
                     <p class="fw-bold">Checkmark Tracker</p>
@@ -63,7 +63,7 @@
                         <input class="input-Width" id="description" name="description" type="text" maxlength="500"
                           required>
                         <button type="submit" class="btn btn-outlin-dark"><span
-                            class="mdi mdi-plus-circle-outline"></span></button>
+                            class="text-light mdi mdi-plus-circle-outline"></span></button>
                       </div>
                     </form>
                   </div>

@@ -6,6 +6,7 @@ import { Pop } from "../utils/Pop.js";
 export class TodosController {
   constructor() {
     AppState.on('identity', this.getTodos)
+    AppState.on('identity', this.showListButton)
     AppState.on('todos', this.drawTodoList)
     AppState.on('todos', this.drawTodoCount)
   }
@@ -23,6 +24,11 @@ export class TodosController {
     const completedTodos = todos.filter(todo => !todo.completed)
     const todoCountElem = document.getElementById('todoCount')
     todoCountElem.innerHTML = `${completedTodos.length} not completed/${todos.length} total`
+  }
+
+  showListButton() {
+    const buttonElm = document.getElementById('todo-list-button')
+    buttonElm.classList.remove('d-none')
   }
 
 
